@@ -1,2 +1,2 @@
-# chequers
+# cheqers
 Checkers implemented in q
