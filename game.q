@@ -42,6 +42,11 @@ showGrid:{[bw]show($[bw=`b;.util.rotateGrid;::])grid}
 userChoice:{break}
 
 move:{[bw;coords;lr]
+    if[not type[bw]=-11h; '"bw must be an atom"];
+    if[not bw in `b`w; '"bw must be either `b or `w"];
+    if[not type[coords]=7h; '"coords must be a list"];
+    if[not type[lr]=-11h; '"lr must be an atom"];
+    if[not lr in `l`r; '"lr must be either `l or `r"];
     povGrid:$[bw=`b;.util.rotateGrid grid;grid];        / rotate if bw=`b
     cxi:coords[0];                                      / vertical
     cyi:coords[1];                                      / horizontal
